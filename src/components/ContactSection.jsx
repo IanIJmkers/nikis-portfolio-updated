@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="min-h-[80vh] md:min-h-screen w-full bg-white flex flex-col items-center justify-center relative py-20 md:py-0"
+      className="w-full bg-white flex flex-col items-center justify-center relative py-8 md:py-10 lg:py-12"
     >
       <motion.div
         className="text-center px-5 md:px-8"
@@ -73,7 +73,7 @@ const ContactSection = () => {
       </motion.div>
 
       {/* Footer */}
-      <div className="absolute bottom-6 md:bottom-8 left-0 right-0 text-center text-[9px] text-gray-footer tracking-[1.5px] uppercase">
+      <div className="mt-10 md:mt-12 text-center text-[9px] text-gray-footer tracking-[1.5px] uppercase">
         &copy; {new Date().getFullYear()} Nikoletta Kalmar
       </div>
     </section>

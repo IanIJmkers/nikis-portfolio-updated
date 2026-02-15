@@ -35,10 +35,10 @@ const HeroSection = () => {
 
       <div className="absolute right-5 bottom-16 max-w-[50%] text-right md:max-w-none md:bottom-10 md:right-8 lg:bottom-12 lg:right-12 z-10">
         <motion.h1
-          className="font-lunette text-[clamp(2.8rem,8vw,8rem)] font-[699] text-gold m-0 uppercase leading-[0.82] tracking-[3px] md:tracking-[4px]"
+          className="font-lunette text-[clamp(3.5rem,10vw,10rem)] font-[300] text-gold m-0 uppercase leading-[0.82] tracking-[3px] md:tracking-[4px]"
           style={{ transformOrigin: "bottom right" }}
-          initial={{ opacity: 0, y: 30, scaleY: 1.6 }}
-          animate={{ opacity: 1, y: 0, scaleY: 1.6 }}
+          initial={{ opacity: 0, y: 30, scaleY: 1.9 }}
+          animate={{ opacity: 1, y: 0, scaleY: 1.9 }}
           transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
         >
           Where strategy
