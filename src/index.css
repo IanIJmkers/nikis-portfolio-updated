@@ -13,6 +13,13 @@
   --color-gray-border: #eee;
   --color-gray-button-border: #ddd;
   --color-gray-footer: #999;
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @font-face {

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Linkedin, Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -32,6 +33,24 @@ const ContactSection = () => {
         <div className="mt-16 md:mt-20 text-[10px] text-gray-footer tracking-[1px]">
           &copy; {new Date().getFullYear()} Nikoletta Kalmar. All rights
           reserved.
+        </div>
+        <div className="flex items-center gap-5 mt-8 md:mt-10">
+          <motion.a
+            href="https://linkedin.com/in/nikoletta-kalmar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black transition-opacity duration-300"
+            whileHover={{ opacity: 0.5 }}
+          >
+            <Linkedin size={16} strokeWidth={1.5} />
+          </motion.a>
+          <motion.a
+            href="mailto:hello@nikikalmar.com"
+            className="text-black transition-opacity duration-300"
+            whileHover={{ opacity: 0.5 }}
+          >
+            <Mail size={16} strokeWidth={1.5} />
+          </motion.a>
         </div>
       </motion.div>
     </section>

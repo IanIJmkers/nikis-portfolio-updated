@@ -38,8 +38,8 @@ const AboutSection = () => {
               how we produce and who produces our work.
             </p>
             <p className="text-[13px] leading-[1.8] text-gray-dark mb-5 font-light">
-              &ldquo;Sustainability&rdquo; as a term has been used and misused so
-              frequently over the past decade, that claiming you&apos;re
+              &ldquo;Sustainability&rdquo; as a term has been used and misused
+              so frequently over the past decade, that claiming you&apos;re
               sustainable, isn&apos;t specific enough.
             </p>
           </div>

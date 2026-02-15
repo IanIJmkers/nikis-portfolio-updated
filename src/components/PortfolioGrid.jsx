@@ -33,18 +33,17 @@ const PortfolioGrid = ({
 
   let cardWidth, cardHeight;
   if (isSmall) {
-    cardWidth = isDesktop ? 280 : isTablet ? 220 : 180;
-    cardHeight = isDesktop ? 380 : isTablet ? 300 : 240;
+    cardWidth = isDesktop ? 310 : isTablet ? 250 : 180;
+    cardHeight = isDesktop ? 420 : isTablet ? 340 : 240;
   } else {
-    cardWidth = isDesktop ? 380 : isTablet ? 300 : 260;
-    cardHeight = isDesktop ? 540 : isTablet ? 420 : 340;
+    cardWidth = isDesktop ? 420 : isTablet ? 340 : 280;
+    cardHeight = isDesktop ? 580 : isTablet ? 460 : 360;
   }
 
-  const innerScale = 0.6;
+  const canHover = isTablet;
+  const innerScale = canHover ? 0.75 : 1;
   const innerWidth = Math.round(cardWidth * innerScale);
   const innerHeight = Math.round(cardHeight * innerScale);
-
-  const canHover = isTablet;
 
   return (
     <div
@@ -111,16 +110,25 @@ const PortfolioGrid = ({
               </div>
 
               <div className="mt-2.5">
-                <div
-                  className={`font-normal text-black ${
-                    isSmall ? "text-[10px]" : "text-[11px]"
-                  }`}
-                >
-                  {project.title}
+                <div className="flex items-baseline gap-2">
+                  <span
+                    className={`text-gray-mid/40 font-light tabular-nums ${
+                      isSmall ? "text-[8px]" : "text-[9px]"
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div
+                    className={`font-normal text-black ${
+                      isSmall ? "text-[10px]" : "text-[11px]"
+                    }`}
+                  >
+                    {project.title}
+                  </div>
                 </div>
                 <div
                   className={`mt-0.5 text-gray-mid ${
-                    isSmall ? "text-[9px]" : "text-[10px]"
+                    isSmall ? "text-[9px] pl-5.5" : "text-[10px] pl-6"
                   }`}
                 >
                   {project.date}

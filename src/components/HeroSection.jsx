@@ -33,9 +33,9 @@ const HeroSection = () => {
         </motion.span>
       </div>
 
-      <div className="absolute bottom-12 right-5 left-5 text-left md:bottom-10 md:right-8 md:left-auto md:text-right lg:bottom-12 lg:right-12 z-10">
+      <div className="absolute right-5 top-[52%] max-w-[50%] text-right md:top-auto md:max-w-none md:bottom-10 md:right-8 lg:bottom-12 lg:right-12 z-10">
         <motion.h1
-          className="font-lunette text-[clamp(2.5rem,8vw,8rem)] font-[699] text-gold m-0 uppercase leading-none tracking-[2px] md:tracking-[4px]"
+          className="font-lunette text-[clamp(2.8rem,8vw,8rem)] font-[699] text-gold m-0 uppercase leading-[0.82] tracking-[3px] transform-[scaleY(1.25)] origin-[top_right] md:transform-none md:leading-none md:tracking-[4px]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
