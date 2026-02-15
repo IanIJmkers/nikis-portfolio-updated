@@ -18,7 +18,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div style={{ width: "100%", overflowX: "hidden" }}>
+    <div className="w-full overflow-x-hidden">
       <StickyNav visible={showNav} />
       <HeroSection />
       <PortfolioSection />

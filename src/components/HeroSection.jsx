@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import styles from "./HeroSection.module.css";
 
 const HeroSection = () => {
   const scrollTo = (id) => {
@@ -7,24 +6,26 @@ const HeroSection = () => {
   };
 
   return (
-    <section className={styles.hero}>
+    <section className="h-screen w-full relative flex flex-col bg-black overflow-hidden">
       <img
         src="/images/globes.png"
         alt="Hero background"
-        className={styles.backgroundImage}
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-70"
       />
 
-      <div className={styles.topNav}>
+      <div className="flex justify-between items-center px-5 py-4 md:px-8 md:py-5 lg:px-12 lg:py-6 relative z-10">
         <motion.span
-          className={styles.navItem}
+          className="text-[11px] font-light text-white cursor-pointer tracking-[2px] uppercase transition-opacity duration-300"
           whileHover={{ opacity: 0.5 }}
           onClick={() => scrollTo("portfolio")}
         >
           Portfolio
         </motion.span>
-        <span className={styles.navCenter}>Nikoletta Kalmar</span>
+        <span className="text-xl md:text-2xl lg:text-4xl font-gloved font-normal text-white tracking-[3px] md:tracking-[4px] lg:tracking-[5px]">
+          Nikoletta Kalmar
+        </span>
         <motion.span
-          className={styles.navItem}
+          className="text-[11px] font-light text-white cursor-pointer tracking-[2px] uppercase transition-opacity duration-300"
           whileHover={{ opacity: 0.5 }}
           onClick={() => scrollTo("about")}
         >
@@ -32,9 +33,9 @@ const HeroSection = () => {
         </motion.span>
       </div>
 
-      <div className={styles.titleContainer}>
+      <div className="absolute bottom-12 right-5 left-5 text-left md:bottom-10 md:right-8 md:left-auto md:text-right lg:bottom-12 lg:right-12 z-10">
         <motion.h1
-          className={styles.title}
+          className="font-lunette text-[clamp(2.5rem,8vw,8rem)] font-[699] text-gold m-0 uppercase leading-none tracking-[2px] md:tracking-[4px]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
@@ -44,20 +45,6 @@ const HeroSection = () => {
           becomes design.
         </motion.h1>
       </div>
-
-      <motion.div
-        className={styles.scrollIndicator}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <span className={styles.scrollText}>Scroll</span>
-        <motion.div
-          className={styles.scrollLine}
-          animate={{ scaleY: [1, 0.5, 1] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
     </section>
   );
 };
