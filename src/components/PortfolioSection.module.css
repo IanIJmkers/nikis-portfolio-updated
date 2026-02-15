@@ -1,0 +1,18 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.inner {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 70vh;
+    height: auto;
+  }
+}

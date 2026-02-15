@@ -1,0 +1,170 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  z-index: 1000;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navItem {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.navCenter {
+  font-size: 24px;
+  font-family: "Gloved", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.contentWrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.projectInfo {
+  padding-top: 160px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #888;
+  font-weight: 300;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 120px;
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.moreProjects {
+  border-top: 1px solid #eee;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.moreProjectsTitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.backButton {
+  font-size: 13px;
+  color: #000;
+  background: none;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    padding: 30px 40px;
+  }
+
+  .contentWrapper {
+    padding: 0 40px;
+  }
+
+  .gallery {
+    gap: 60px;
+  }
+
+  .projectInfo {
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 20px 24px;
+  }
+
+  .navItem {
+    font-size: 14px;
+  }
+
+  .navCenter {
+    font-size: 18px;
+  }
+
+  .contentWrapper {
+    padding: 0 24px;
+  }
+
+  .projectInfo {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .gallery {
+    gap: 40px;
+    padding-bottom: 60px;
+  }
+
+  .moreProjects {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
