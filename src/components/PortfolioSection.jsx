@@ -5,9 +5,10 @@ const PortfolioSection = () => {
   return (
     <section
       id="portfolio"
-      className="w-full bg-white overflow-hidden relative py-12 md:py-16 lg:py-20"
+      className="h-screen md:h-screen w-full bg-white overflow-hidden relative max-md:min-h-[70vh] max-md:h-auto"
     >
       <motion.div
+        className="h-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}

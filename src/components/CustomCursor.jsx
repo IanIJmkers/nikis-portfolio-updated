@@ -76,7 +76,7 @@ const CustomCursor = () => {
           mass: 0.5,
         }}
       >
-        <Sparkles size={24} className="text-gold" strokeWidth={1.5} />
+        <Sparkles size={24} className="text-gold" strokeWidth={1.5} fill="currentColor" />
       </motion.div>
 
       {/* Trailing particles */}

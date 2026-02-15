@@ -1,58 +1,81 @@
 import { motion } from "framer-motion";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="min-h-[70vh] py-16 md:py-0 md:h-screen w-full bg-white flex items-center justify-center"
+      className="min-h-[80vh] md:min-h-screen w-full bg-white flex flex-col items-center justify-center relative py-20 md:py-0"
     >
       <motion.div
-        className="max-w-[500px] px-5 md:px-8 lg:px-12 text-center"
+        className="text-center px-5 md:px-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
       >
-        <h1 className="text-2xl md:text-3xl font-light mb-6 md:mb-8 tracking-[1px] text-black">
-          Get in Touch
-        </h1>
-        <p className="text-sm leading-[1.8] text-gray-muted mb-3">
+        {/* Decorative sparkle */}
+        <motion.svg
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          className="mx-auto mb-8"
+          initial={{ opacity: 0, rotate: -30 }}
+          whileInView={{ opacity: 1, rotate: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <path
+            d="M20 2 C20 2, 22 16, 20 20 C20 20, 24 18, 38 20 C38 20, 24 22, 20 20 C20 20, 22 24, 20 38 C20 38, 18 24, 20 20 C20 20, 16 22, 2 20 C2 20, 16 18, 20 20 C20 20, 18 16, 20 2Z"
+            stroke="rgb(233, 229, 160)"
+            strokeWidth="1"
+            fill="none"
+          />
+        </motion.svg>
+
+        <h2 className="font-lunette text-3xl md:text-4xl lg:text-5xl text-black tracking-[2px] mb-4 md:mb-6">
+          Let&apos;s Talk
+        </h2>
+
+        <p className="text-[13px] leading-[1.9] text-gray-muted max-w-95 mx-auto mb-10 md:mb-12 font-light">
           Available for commissions, collaborations, and editorial work.
-        </p>
-        <p className="text-sm leading-[1.8] text-gray-muted mb-3">
+          <br />
           Based in New York, working worldwide.
         </p>
-        <motion.a
-          href="mailto:hello@nikikalmar.com"
-          className="text-sm md:text-base text-black no-underline border-b border-black inline-block mt-5 transition-opacity duration-300"
-          whileHover={{ opacity: 0.5 }}
-        >
-          hello@nikikalmar.com
-        </motion.a>
-        <div className="mt-16 md:mt-20 text-[10px] text-gray-footer tracking-[1px]">
-          &copy; {new Date().getFullYear()} Nikoletta Kalmar. All rights
-          reserved.
-        </div>
-        <div className="flex items-center gap-5 mt-8 md:mt-10">
+
+        {/* Contact links */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
+          <motion.a
+            href="mailto:hello@nikikalmar.com"
+            className="flex items-center gap-2 text-[12px] tracking-[1.5px] uppercase text-black transition-opacity duration-300"
+            whileHover={{ opacity: 0.5 }}
+          >
+            <Mail size={14} strokeWidth={1.5} />
+            <span>hello@nikikalmar.com</span>
+            <ArrowUpRight size={10} strokeWidth={1.5} className="text-gray-mid" />
+          </motion.a>
+
+          <span className="hidden sm:block w-px h-3 bg-gray-border" />
+
           <motion.a
             href="https://linkedin.com/in/nikoletta-kalmar"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black transition-opacity duration-300"
+            className="flex items-center gap-2 text-[12px] tracking-[1.5px] uppercase text-black transition-opacity duration-300"
             whileHover={{ opacity: 0.5 }}
           >
-            <Linkedin size={16} strokeWidth={1.5} />
-          </motion.a>
-          <motion.a
-            href="mailto:hello@nikikalmar.com"
-            className="text-black transition-opacity duration-300"
-            whileHover={{ opacity: 0.5 }}
-          >
-            <Mail size={16} strokeWidth={1.5} />
+            <Linkedin size={14} strokeWidth={1.5} />
+            <span>LinkedIn</span>
+            <ArrowUpRight size={10} strokeWidth={1.5} className="text-gray-mid" />
           </motion.a>
         </div>
       </motion.div>
+
+      {/* Footer */}
+      <div className="absolute bottom-6 md:bottom-8 left-0 right-0 text-center text-[9px] text-gray-footer tracking-[1.5px] uppercase">
+        &copy; {new Date().getFullYear()} Nikoletta Kalmar
+      </div>
     </section>
   );
 };

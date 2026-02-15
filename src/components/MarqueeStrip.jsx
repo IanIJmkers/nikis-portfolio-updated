@@ -1,10 +1,14 @@
-const MarqueeStrip = () => {
+const MarqueeStrip = ({ reverse = false }) => {
   const text =
     "DESIGN — STRATEGY — SUSTAINABILITY — EDITORIAL — FASHION — IDENTITY — BRANDING — ";
 
   return (
     <div className="w-full py-3 md:py-4 bg-black overflow-hidden select-none">
-      <div className="animate-marquee flex whitespace-nowrap">
+      <div
+        className={`flex whitespace-nowrap ${
+          reverse ? "animate-marquee-reverse" : "animate-marquee"
+        }`}
+      >
         {[0, 1, 2, 3].map((i) => (
           <span
             key={i}
