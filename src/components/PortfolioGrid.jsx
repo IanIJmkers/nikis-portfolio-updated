@@ -16,17 +16,18 @@ const PortfolioGrid = ({
     : projects;
 
   const isSmall = size === "small";
+  const isMedium = size === "medium";
 
   return (
     <div
       className={`flex items-center overflow-hidden w-full ${
-        isSmall ? "h-auto" : "h-full"
+        isSmall || isMedium ? "h-auto" : "h-full"
       }`}
     >
       <div
         className={
           centered
-            ? "flex flex-row items-center gap-2.5 overflow-x-visible overflow-y-hidden px-5 md:px-8 lg:px-[60px] scroll-smooth flex-wrap justify-center h-auto"
+            ? "flex flex-row items-center gap-6 md:gap-8 overflow-x-auto overflow-y-hidden px-5 md:px-8 lg:px-12 py-5 md:py-8 scroll-smooth flex-nowrap justify-center h-auto [-webkit-overflow-scrolling:touch]"
             : "flex flex-row items-center gap-2.5 overflow-x-auto overflow-y-hidden px-5 md:px-8 lg:px-[60px] py-5 md:py-8 lg:py-10 h-full scroll-smooth flex-nowrap [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-transparent"
         }
       >
@@ -44,18 +45,24 @@ const PortfolioGrid = ({
             <div
               className={`overflow-hidden relative ${
                 isSmall
-                  ? "w-[200px] h-[260px] md:w-[240px] md:h-[320px] lg:w-[320px] lg:h-[420px]"
-                  : "w-[280px] h-[360px] md:w-[400px] md:h-[520px] lg:w-[540px] lg:h-[700px]"
+                  ? "w-[200px] h-[260px] md:w-60 md:h-80 lg:w-80 lg:h-105"
+                  : isMedium
+                    ? "w-65 h-85 md:w-85 md:h-110 lg:w-105 lg:h-135"
+                    : "w-70 h-90 md:w-100 md:h-130 lg:w-135 lg:h-175"
               }`}
             >
               <img
                 src={project.image}
                 alt={project.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover absolute top-0 left-0"
               />
               <motion.img
                 src={project.hoverImage}
                 alt={`${project.title} hover`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover absolute top-0 left-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: hoveredId === project.id ? 1 : 0 }}
@@ -67,9 +74,7 @@ const PortfolioGrid = ({
             </div>
             <div
               className={`font-normal text-black ${
-                isSmall
-                  ? "mt-2 text-[11px]"
-                  : "mt-3 text-xs"
+                isSmall ? "mt-2 text-[11px]" : "mt-3 text-xs"
               }`}
             >
               {project.title}

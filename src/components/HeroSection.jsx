@@ -8,8 +8,9 @@ const HeroSection = () => {
   return (
     <section className="h-screen w-full relative flex flex-col bg-black overflow-hidden">
       <img
-        src="/images/globes.png"
+        src="/images/globes.webp"
         alt="Hero background"
+        decoding="async"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-70"
       />
 

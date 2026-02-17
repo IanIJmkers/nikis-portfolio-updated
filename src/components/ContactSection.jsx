@@ -35,13 +35,13 @@ const ContactSection = () => {
         </motion.svg>
 
         <h2 className="font-lunette text-3xl md:text-4xl lg:text-5xl text-black tracking-[2px] mb-4 md:mb-6">
-          Let&apos;s Talk
+          Get in touch!
         </h2>
 
         <p className="text-[13px] leading-[1.9] text-gray-muted max-w-95 mx-auto mb-10 md:mb-12 font-light">
           Available for commissions, collaborations, and editorial work.
           <br />
-          Based in New York, working worldwide.
+          Based in The Hague, working worldwide.
         </p>
 
         {/* Contact links */}
@@ -53,7 +53,11 @@ const ContactSection = () => {
           >
             <Mail size={14} strokeWidth={1.5} />
             <span>hello@nikikalmar.com</span>
-            <ArrowUpRight size={10} strokeWidth={1.5} className="text-gray-mid" />
+            <ArrowUpRight
+              size={10}
+              strokeWidth={1.5}
+              className="text-gray-mid"
+            />
           </motion.a>
 
           <span className="hidden sm:block w-px h-3 bg-gray-border" />
@@ -67,7 +71,11 @@ const ContactSection = () => {
           >
             <Linkedin size={14} strokeWidth={1.5} />
             <span>LinkedIn</span>
-            <ArrowUpRight size={10} strokeWidth={1.5} className="text-gray-mid" />
+            <ArrowUpRight
+              size={10}
+              strokeWidth={1.5}
+              className="text-gray-mid"
+            />
           </motion.a>
         </div>
       </motion.div>

@@ -5,7 +5,7 @@ const PortfolioSection = () => {
   return (
     <section
       id="portfolio"
-      className="h-screen md:h-screen w-full bg-white overflow-hidden relative max-md:min-h-[70vh] max-md:h-auto"
+      className="w-full bg-white overflow-hidden relative py-58 md:py-60 lg:py-62"
     >
       <motion.div
         className="h-full"

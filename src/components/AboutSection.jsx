@@ -4,12 +4,14 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="min-h-screen w-full bg-white flex max-md:flex-col max-md:min-h-auto"
+      className="w-full bg-white flex max-md:flex-col py-8 md:py-10 lg:py-12"
     >
       <div className="w-1/2 min-h-[50vh] overflow-hidden max-md:w-full">
         <motion.img
-          src="/images/niki.jpg"
+          src="/images/niki.webp"
           alt="Niki"
+          loading="lazy"
+          decoding="async"
           className="w-[70%] h-[80%] object-cover max-md:w-full max-md:h-full"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

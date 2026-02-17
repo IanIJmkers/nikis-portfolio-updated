@@ -80,6 +80,8 @@ const ProjectPage = () => {
               <img
                 src={image.src}
                 alt={`${project.title} - ${index + 1}`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto block"
                 onError={(e) => {
                   e.target.style.display = "none";
@@ -96,7 +98,7 @@ const ProjectPage = () => {
         <h2 className="text-[10px] font-normal text-black mb-8 tracking-[2px] text-center uppercase">
           More Projects
         </h2>
-        <PortfolioGrid size="small" excludeId={project.id} centered />
+        <PortfolioGrid size="medium" excludeId={project.id} centered />
       </div>
     </motion.div>
   );
