@@ -27,8 +27,8 @@ const IntroAnimation = ({ onComplete }) => {
             <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
               {/* Sparkle/star SVG path drawing */}
               <motion.svg
-                width="120"
-                height="120"
+                width="96"
+                height="96"
                 viewBox="0 0 120 120"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const IntroAnimation = ({ onComplete }) => {
 
               {/* Brand name */}
               <motion.p
-                className="mt-8 font-gloved text-gold text-2xl md:text-3xl tracking-[6px]"
+                className="mt-6 font-gloved text-gold text-xl md:text-2xl tracking-[5px]"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.7, ease: "easeOut" }}
@@ -81,7 +81,7 @@ const IntroAnimation = ({ onComplete }) => {
               </motion.p>
 
               {/* Loading bar */}
-              <div className="mt-6 w-32 h-px bg-white/20 overflow-hidden">
+              <div className="mt-5 w-26 h-px bg-white/20 overflow-hidden">
                 <motion.div
                   className="h-full bg-gold"
                   initial={{ width: "0%" }}

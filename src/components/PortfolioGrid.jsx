@@ -27,8 +27,8 @@ const PortfolioGrid = ({
       <div
         className={
           centered
-            ? "flex flex-row items-center gap-6 md:gap-8 overflow-x-auto overflow-y-hidden px-5 md:px-8 lg:px-12 py-5 md:py-8 scroll-smooth flex-nowrap justify-center h-auto [-webkit-overflow-scrolling:touch]"
-            : "flex flex-row items-center gap-2.5 overflow-x-auto overflow-y-hidden px-5 md:px-8 lg:px-[60px] py-5 md:py-8 lg:py-10 h-full scroll-smooth flex-nowrap [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-transparent"
+            ? "flex flex-row items-center gap-5 md:gap-6 overflow-x-auto overflow-y-hidden px-4 md:px-6 lg:px-10 py-4 md:py-6 scroll-smooth flex-nowrap justify-center h-auto [-webkit-overflow-scrolling:touch]"
+            : "flex flex-row items-center gap-2 overflow-x-auto overflow-y-hidden px-4 md:px-6 lg:px-[48px] py-4 md:py-6 lg:py-8 h-full scroll-smooth flex-nowrap [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-track]:bg-transparent"
         }
       >
         {displayProjects.map((project, index) => (
@@ -45,10 +45,10 @@ const PortfolioGrid = ({
             <div
               className={`overflow-hidden relative ${
                 isSmall
-                  ? "w-[200px] h-[260px] md:w-60 md:h-80 lg:w-80 lg:h-105"
+                  ? "w-40 h-52 md:w-48 md:h-64 lg:w-64 lg:h-84"
                   : isMedium
-                    ? "w-65 h-85 md:w-85 md:h-110 lg:w-105 lg:h-135"
-                    : "w-70 h-90 md:w-100 md:h-130 lg:w-135 lg:h-175"
+                    ? "w-52 h-68 md:w-68 md:h-88 lg:w-84 lg:h-108"
+                    : "w-56 h-72 md:w-80 md:h-104 lg:w-108 lg:h-140"
               }`}
             >
               <img
@@ -74,14 +74,14 @@ const PortfolioGrid = ({
             </div>
             <div
               className={`font-normal text-black ${
-                isSmall ? "mt-2 text-[11px]" : "mt-3 text-xs"
+                isSmall ? "mt-1.5 text-[9px]" : "mt-2.5 text-[10px]"
               }`}
             >
               {project.title}
             </div>
             <div
               className={`text-gray-mid ${
-                isSmall ? "mt-1 text-[10px]" : "mt-1 text-xs"
+                isSmall ? "mt-1 text-[8px]" : "mt-1 text-[10px]"
               }`}
             >
               {project.date}
